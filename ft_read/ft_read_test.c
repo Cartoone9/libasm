@@ -13,9 +13,12 @@ int open_file(void) {
 
     int fd = open("example.txt", O_RDONLY);
     if (fd == ERROR) {
-        char* err = "open failed";
-        write(2, err, strlen(err));
-        exit(1);
+        fd = open("ft_read/example.txt", O_RDONLY);
+        if (fd == ERROR) {
+            char* err = "open failed";
+            write(2, err, strlen(err));
+            exit(1);
+        }
     }
     return (fd);
 }
