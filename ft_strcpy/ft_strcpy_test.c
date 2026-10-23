@@ -8,11 +8,11 @@ int main(void) {
     const char* src = "hello world";
     char a[64], b[64];
 
-    char* ra = ft_strcpy(a, src);
-    char* rb = strcpy(b, src);
+    char* ptr_a = strcpy(a, src);
+    char* ptr_b = ft_strcpy(b, src);
 
-    printf("[%s] vs [%s]\n", a, b);
-    printf("ret %d\n", ra == a && rb == b);
+    printf("orig[%s] vs asm[%s]\n", a, b);
+    printf("both func returns correct ptr ? %d\n", ptr_a == a && ptr_b == b);
 
     return (0);
 }
