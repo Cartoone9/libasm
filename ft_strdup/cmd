@@ -1,1 +1,0 @@
-nasm -felf64 -g -F dwarf ft_strdup.s && gcc -g ft_strdup_test.c ft_strdup.o ../ft_strlen/ft_strlen.o ../ft_strcpy/ft_strcpy.o && ./a.out
