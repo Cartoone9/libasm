@@ -7,6 +7,7 @@ CC      := cc
 CFLAGS  := -Wall -Werror -Wextra
 
 ifdef DEBUG
+	ASFLAGS += -g -F dwarf
 	CFLAGS += -g3
 endif
 
